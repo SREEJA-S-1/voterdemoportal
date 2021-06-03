@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Voters Application</title>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="sree.css">
+    </head>
+    <body>
+        <nav>
+            <img class="smaller" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAmVBMVEX/mTMSiAf/////lycAgQAAAIgAAIUAAH4AAIIAAIMAAHwAAHPi4u+kpMvz8/kAAHjn5/Lt7fXd3ey5uddPT6GZmcWDg7n6+v7Ly+HIyOJERJxlZao+PponJ5L29vy0tNbW1uggIJCfn8iGhrsYGJBNTaB2drQQEIx+fripqc5ra62QkMBXV6QiIpFfX6i+vtwyMpw6Opg1NZe0gadDAAAEvUlEQVR4nO3ba3OiSBiG4UzvdDcip8YDiAdQZAIxExP//4/btzHjZH1Nze6HpVPlc1Ul0eiH9g7Q2JKHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/+gvuPYg4BqacGjCoQmHJhyacF+hSTI5LFd7uV8tD5PE9WDEF2gSHNbaGyklpVRq5Omfh8D1kBw3qaZ6pCiGVFrr/oYc6SZ3OyinTZIpdZCeevnhNyY1jf/jRXm0vejG6S7kssnObhmeNxMbcTSiEuZIt2aeZ7eancNxOWzy7NFrn3cnI/p9pbTfcmFO3ZxaeVN3A3PWJNrS5lAEmb3d5wgvt7KgoMe2kauhuWoSPdK2QHvIwt5ZpPTtQF/p+S7tVbQNPbqK4qhJRluJ17VGZB3di2yPF/o62AxdJkzbUZRt5mZwjpo0lOTY3wrtFGMPHq/vP5N+JxJHiuLomOKmycyTXinOUewLX1IYSTmW7/cpiSjpOTMno3PSJNA049TnQ4gIae8J6cVrSkWbSNdvJvRITbOPdnJO66RJo1QzM3RjaY8YMhLVVmR+JraViGhzEZn9vZnZp7kYnosmCy31+UR180oH1a4QWWyiODJxJhqajaPTpn80oee5OM130WSlVL3pZ11hJO0daiLWITUJ12KiaM+Spn9ssamVKhyMz0GTVNsDrOi6/o5fiVKLdmVis2qFLkXl27OV/rhCh1mdDj9AB01qmoftnz+Z2ir5+Cjk08JP49RfPElxHNvdpZvao2vhyVE9/AAdNHmkOfZ8ihpK2l4m4y4fJ7ryKp2M8248oe1D7vrHDc3Z++EHOHwTmojlr9tRISciHB/beZ3v87puj+OdmMiV+fUE6WI6Hr5J6amnaFEuzptK6av8GAfrKmzDah3Ex/zR798Iik1e5tGT8srBRzh8k7lSLf1ID9NlWNF5yHLcBuugLd6KNl0H87E9N0m7p+Zgj66tUvPBRzh8k2cl/fNZRzLbxut2kczXaWFXIEdFsG6TfH6KH2fnPSb3pXoefITDN3lVanpZBTDhytd12o6kNWrTg/ZPu8vKYzRV6nXwEQ7fRErvkiSLIpNWeViovokqdnmVmii6LBJE3u8D8mCcNEmqYzhbnqT2/TiOvX37Js/e6q1Hv4l9LX8+H8IyT++mCbaTK1fHkzccTz7OO8Hveafp550mWM/vct6Zn085cH7ywe3z2JTOY9O7PY/F+50b9vS++PyiP3tfPLm398WiHv15/aTs109Wd7N+gnW2G4p/uR6b3c96rMiv1u2bT9btgztat+8/3zmY989xbn6+I+7t8x18DngLPi++YYrrChhcf3IDrlO6IdqOpCpSXM/2D/11j234yXWPwy+bXOD6WO5rXkc9vdvrqAWut78N/5dx08f/3zF/fvr/7is0+WrQhEMTDk04NOHQhHv4DtcevsE1NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMT7m/cNifkUwM0UQAAAABJRU5ErkJggg==" alt="india">
+            <img class="taller" src="data:image/png;base64,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" alt="alt">
+            <p>NATIONAL VOTERS' SERVICE DEMO PORTAL</p>
+            </nav>
+        <div class="teas"><button style="padding-left: 20px;padding-right: 20px; margin: 7px; margin-left: 50px; background-color: gainsboro;border-radius: 5px;border-color: lightsteelblue ">+A</button><button style="padding-left: 20px;padding-right: 20px; margin: 7px; margin-left: 70px; background-color: gainsboro;border-radius: 5px;border-color: lightsteelblue ">-A</button>
+            <label style="margin-left: 800px;"> Select Language: </label> <select name="cars" id="cars"><option value="select">Hindi</option>
+  <option value="Tamil Nadu">English</option></select></div><br>
+        <div class="free">Note: Fields marked with asterisks (<mark class="blue">*</mark>) are mandatory.</div>
+        <form><div class="teaa">Type 6<br>[See rule 13(1) and 26]</div>
+            <div class="tea">Application for inclusion of name in the electoral roll for the first time due to the transfer of voter or any other constituency from any one constituency</div><br>In Service<br><br>Electoral Registration Officer,<br><br>
+            <label>State <mark class="red">*</mark></label>
+
+<select name="cars" id="cars">
+    <option value="select">Select</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="sikkim">Sikkim</option>
+  <option value="kerala">kerala</option>
+  <option value="other">other</option>
+</select>
+            <label>Registration</label>
+            <select name="auto" id="auto" >
+                
+    <option value="select">Select</option>
+  <option value="Chennai">Chennai</option>
+  <option value="sikkim">Salem</option>
+  <option value="kerala">pondicherry</option>
+  <option value="other">other</option>
+            </select><br><br>
+            <label>Legislative Assembly/ Parlimentary</label>
+            <select name="auto" id="auto" >
+                
+    <option value="select">Select</option>
+  <option value="Chennai">Chennai</option>
+  <option value="sikkim">Salem</option>
+  <option value="kerala">pondicherry</option>
+  <option value="other">other</option>
+            </select><br><label> Constituency <mark class="red">*</mark></label>
+            
+            <br><br><br>
+I request that my name be included in electoral rolls for all the aforesaid areas.<br>
+            <input type="radio" value="first">First time voter<br>
+            <input type="radio" value="Due">Due to transfer from other meeting areas.<br><br>
+            Below are specifications in support of my claim to be included in the electoral rolls.<br><br>
+            <div class="tea"> Mandatory specifications</div><br><br>
+            <label>(A)Name<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>(B)Surname<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                    <input type="text" placeholder="(In Regional)"></label><br><br>
+            <label>(C)Name of the applicant's relative<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>(D)Type of relationship<mark class="red">*</mark><select name="auto" id="auto" >
+                
+    <option value="select">Select</option>
+  <option value="Parents">Parents</option>
+  <option value="siblings">Siblings</option>
+  <option value="kerala">Guardian</option>
+                    </select></label><br><br>
+                    <input type="radio" >(E)Age [on January 1 of the calender]<mark class="red">*</mark>
+                    <input type="text" placeholder="current year">
+                    <select name="auto" id="auto" >
+                
+    <option value="select">year</option>
+  <option value="Parents">18</option>
+  <option value="siblings">19</option>
+  <option value="kerala">20</option>
+  <option value="siblings">21</option>
+  <option value="kerala">22</option>
+  <option value="siblings">23</option>
+  <option value="kerala">24</option>
+  <option value="siblings">25</option>
+  <option value="kerala">26</option>
+  <option value="siblings">27</option>
+  <option value="kerala">28</option>
+  <option value="siblings">29</option>
+  <option value="kerala">30</option>
+  <option value="siblings">31</option>
+  <option value="kerala">32</option>
+                    </select>
+                    <select name="auto" id="auto"><option value="siblings">select</option></select><br><br>
+                    <label>Or</label><br><br>
+                    <input type="radio" >(F)Date of birth<input type="date">
+                    <label>(if known)<mark class="red">*</mark><br><br></label>
+                                <label>(G)Applicant's gender<mark class="red">*</mark></label><select name="auto" id="auto">
+                                        <option>select</option>
+                                    </select><br><br>
+                <div class="tea">(H)Current address, whose applicant is nominally resident </div><br><br>
+                <label>House no.<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>Street / area / location<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>City / Village<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>Post Office<mark class="red">*</mark><input type="text" placeholder="(In English)">
+                <input type="text" placeholder="(In Regional)"></label><br><br>
+                <label>Pin code<mark class="red">*</mark><input type="text"></label><br><br>
+                        <label>State / Union Territory<mark class="red">*</mark><select name="auto" id="auto">
+                                <option>select</option>
+                            </select></label><br><br>
+                <label>District<mark class="red">*</mark><select name="auto" id="auto">
+                                <option>select</option>
+                    </select> </label><br><br>
+                     <label>Family / Neighbour Epic No. <input type="text"></label><br><br>
+                    <div class="tea">Optional specialties</div><br><br>
+                    <label>(T)Disability (if any)</label><br><br>
+                    <input type="checkbox">Visual impairment
+                    <input type="checkbox">Speech and hearing impairment
+                    <input type="checkbox">Motion disabling
+                    <input type="checkbox">other
+                    <input type="text"><br><br>
+                    <label>(Th)Email ID (optional)<input type="text"></label><br><br>
+                    <label>(D)Mobile number (optional) +91<input type="text"></label><br><br>
+        <div class="tea">Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg)(max. 2MB)
+        <a href="" style="color: blue; padding-left: 300px">List of supported documents</a></div><br><br>
+        <label> Your photo<mark class="red">*</mark></label>
+        <br>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <label> Age proof<mark class="red">*</mark></label>
+        <br>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile">
+            <label>Document type<mark class="red">*</mark></label>
+            <select name="cars" id="cars">
+                <option value="select">Select</option></select><br><br>
+            <label> Address proof<mark class="red">*</mark></label>
+        <br>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile">
+            <label>Document type<mark class="red">*</mark></label>
+            <select name="cars" id="cars">
+                <option value="select">Select</option></select><br><br>
+<div class="tea">Declaration</div><br><br>
+Here by I declare that according to my best knowledge and belief<br>I am a citizen of India and of my birth;
+<br><br><label>City / Village:<input type="text"></label><br><br>
+<label>Select state<mark class="red">*</mark></label><select name="cars" id="cars">
+                <option value="select">Select</option></select><label>District<mark class="red">*</mark></label><select name="cars" id="cars">
+                    <option value="select">Select</option></select><br><br>
+                    <label>Date<mark class="red">*</mark><input type="date"></label><br>
+                    (ii) I am a nominally resident in the address given in the above (date, month, year) above;<br><br>
+                    I have not applied to include my name in the electoral roll for any other constituency;<br><br>
+                    <input type="radio">(iv) My name has not been already included in the electoral roll for this or any other assembly / parliamentary constituency<br><br>
+                    <label>Or</label><br><br>
+                    <input type="radio">My name would have been included in electoral rolls of the State's constituency, in which I was already residing in the address mentioned below, and if so, then I request that it be removed from that electoral roll. Go.<br><br><br>
+                   <label>Location<mark class="red">*</mark><input type="text"></label>
+                    <label>Date<input type="date"></label><br><br>
+                    I am afraid that the statement or declaration, which is false, to whom I know it or believe that it is false or I do not believe in being true, the People's Representation Act, 1950 (43 of 1950 ) Is punishable under section 31<br><br>
+                    <label>Captcha<img src="https://www.snaphost.com/captcha/images/captcha_without_label_big.gif" alt="hello"></label>
+                    <img src="data:image/jpeg;base64,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" alt="hi" style="height: 30px; width: 30px">
+                    <input type="text"><br><br><br>
+                    <input type="button" value="Reset" style="background-color: green; color: white;border-radius: 3px; margin-left: 400px;margin-bottom: 10px; margin-bottom: 10px;">
+                    <input type="submit" value="Submit" style="background-color: green; color: white; border-radius: 3px; margin-left: 0px;">
+        </form>
+        <footer>sreejasreenidhi88@gmail.com</footer>
+        </body>
+</html>

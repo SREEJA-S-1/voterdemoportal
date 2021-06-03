@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-Mar-2021, 5:04:11 pm
+    Author     : Home
+*/
+body{
+   margin: 0;
+}
+nav{
+    border: 6px black solid;
+    background-color: black;
+    text-align: center;
+}
+.smaller{
+    height: 70px;
+    float: left;
+}
+p{
+    color: white;
+    font-size: 22px;
+}
+.taller{
+    float: right;
+    height: 70px;
+     display: inline;
+}
+.free{
+    color:  brown;
+    font-size: 20px;
+    padding-left: 60px;
+}
+form{
+    padding-top: 10px;
+    background-color: whitesmoke;
+    margin-left: 75px;
+    margin-right: 75px; 
+    border: black;
+    padding-left: 20px; 
+    border:1px black solid;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+#cars{
+    margin-left: 20px;
+    background-color: darkgray;
+    color: white;
+    border-radius: 4px;
+}
+label{
+    margin-left: 70px;
+}
+#auto{
+    margin-left: 20px;
+     background-color: darkgray;
+     color: white;
+      border-radius: 4px;
+       
+}
+input{
+    margin-left: 70px;
+}
+mark.red{
+    color: orangered;
+    background-color: whitesmoke;
+}
+.tea{
+    background-color: darksalmon;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+.teas{
+    background-color: white;
+    margin-right: 5px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    border:0.1px black solid;
+    margin-left: 5px;
+    height: 30px;
+    margin-top: 5px;
+}
+footer{
+   border: 20px black solid;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+mark.blue{
+    color: orangered;
+    background-color: white;
+}
+.teaa{
+      background-color: silver;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
